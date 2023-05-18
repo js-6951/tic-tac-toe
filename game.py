@@ -28,13 +28,16 @@ class TicTacToe:
         for i in range(0,3):
             if self.grid[i][0] == self.grid[i][1] and self.grid[i][1] == self.grid[i][2] and self.grid[i][0] != ' ':
                 self.game_over = True 
-                print("winner is Player {}".format(winner.num))
+                print("Winner is Player {}".format(winner.num))
+                return
             elif self.grid[0][i] == self.grid[1][i] and self.grid[1][i] == self.grid[2][i] and self.grid[0][i] != ' ':
                 self.game_over = True
-                print("winner is Player {}".format(winner.num))
+                print("Winner is Player {}".format(winner.num))
+                return
             elif self.grid[0][0] == self.grid[1][1] and self.grid[1][1] == self.grid[2][2] and self.grid[i][0] != ' ':
                 self.game_over = True           
-                print("winner is Player {}".format(winner.num))
+                print("Winner is Player {}".format(winner.num))
+                return
             else: 
                 for j in range(0,3):
                     if self.grid[i][j] == ' ': 
